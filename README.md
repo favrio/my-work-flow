@@ -5,7 +5,7 @@
 gulp --path 路径
 
 
-`gulp build` 全部编译
-`gulp scripts` 编译所有脚本
-`gulp styles` 编译所有样式表
-`gulp clean` 清除所有编译生成文件
++ `gulp build` 全部编译
++ `gulp scripts` 编译所有脚本
++ `gulp styles` 编译所有样式表
++ `gulp clean` 清除所有编译生成文件
