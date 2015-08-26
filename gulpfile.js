@@ -14,8 +14,11 @@ var gulp = require("gulp"),
 
 var hasPath = process.argv.indexOf("--path");
 var workPathRoot = "";
-if (hasPath) {
+if (hasPath > 0) {
 	workPathRoot = process.argv[3];
+} else {
+	console.error("请键入一个工作目录，通过--path。");
+	process.exit(1);
 }
 // styleSrc: path.join(root, "style.src/")
 var lessFiles = path.join(workPathRoot, "src/styles/*.less");
