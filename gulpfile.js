@@ -43,7 +43,9 @@ function less2css(files) {
 // 脚本单个编译
 function scriptFn(files) {
 	return gulp.src(files)
-		.pipe(jshint())
+		.pipe(jshint({
+			esnext: true
+		}))
 		.pipe(jshint.reporter("default"))
 		.pipe(babel())
 		.pipe(gulp.dest(outputSscripts))
