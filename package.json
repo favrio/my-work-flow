@@ -1,0 +1,33 @@
+{
+  "name": "my-es6-work",
+  "version": "1.0.0",
+  "description": "use gulp to convert es6 code to es5.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hr1992/my-es6-work.git"
+  },
+  "author": "HEnG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hr1992/my-es6-work/issues"
+  },
+  "homepage": "https://github.com/hr1992/my-es6-work",
+  "devDependencies": {
+    "del": "^1.2.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-babel": "^5.2.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-less": "^3.0.3",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.3.0",
+    "gulp-watch": "^4.3.5"
+  }
+}
