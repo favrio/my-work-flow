@@ -1,4 +1,5 @@
 var gulp = require("gulp"),
+	path = require("path"),
 	less = require("gulp-less"),
 	autoprefixer = require("gulp-autoprefixer"),
 	minifycss = require("gulp-minify-css"),
@@ -11,10 +12,17 @@ var gulp = require("gulp"),
 	del = require("del"),
 	watch = require("gulp-watch");
 
-var lessFiles = "src/styles/*.less";
-var outputStyles = "dist/styles";
-var scriptFiles = "src/scripts/*.js";
-var outputSscripts = "dist/scripts";
+var hasPath = process.argv.indexOf("--path");
+var workPathRoot = "";
+if (hasPath) {
+	workPathRoot = process.argv[3];
+}
+// styleSrc: path.join(root, "style.src/")
+var lessFiles = path.join(workPathRoot, "src/styles/*.less");
+var outputStyles = path.join(workPathRoot, "dist/styles");
+var scriptFiles = path.join(workPathRoot, "src/scripts/*.js");
+var outputSscripts = path.join(workPathRoot, "dist/scripts");
+
 
 
 // 样式表单个编译
@@ -82,7 +90,6 @@ gulp.task("run", function() {
 
 // 默认任务
 gulp.task("default", function() {
-	console.log("监控启动。");
 	watch(lessFiles, function(event) {
 		console.log("样式表：" + event.path + " 事件类型：" + event.type);
 		less2css(event.path);
