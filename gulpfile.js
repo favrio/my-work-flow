@@ -95,11 +95,11 @@ gulp.task("run", function() {
 
 // 默认任务
 gulp.task("default", function() {
-	watch(lessFiles, function(event) {
+	gulp.watch(lessFiles, function(event) {
 		console.log("样式表：" + event.path + " 事件类型：" + event.type);
 		less2css(event.path);
 	});
-	watch(scriptFiles, function(event) {
+	gulp.watch(scriptFiles, function(event) {
 		console.log("脚本文件：" + event.path + "  事件类型：" + event.type);
 		scriptFn(event.path);
 	});
